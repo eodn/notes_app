@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 const Inputs = styled.input`
   
-  }
 `;
 
 function Text() {

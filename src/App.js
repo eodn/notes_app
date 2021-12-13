@@ -1,7 +1,8 @@
 import React from "react";
 import { createGlobalStyle } from 'styled-components';
-import Writing_box from "./components/Writing_box";
-import Text from "./components/Text";
+import NoteWrite from "./components/NoteWrite/NoteWrite";
+import Writing_box from "./components/NoteWrite/NoteWrite";
+
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -13,16 +14,6 @@ const GlobalStyle = createGlobalStyle`
 
     text-align: center ;
   }
-  button {
-      margin: 0 auto;
-      display:block;
-      background-color: #868e96;
-			padding: 15px 30px;
-      border-color: #f8f9fa;
-      border-radius: 4px;
-			font-size: 16px;
-			cursor: pointer;
-  }
 `;
 
 
@@ -31,8 +22,7 @@ function App() {
     <>
     <h1>Notes</h1>
     <GlobalStyle />
-    <Writing_box />
-    <button>메모하기</button>
+    <NoteWrite />
     </>
   )
 }
