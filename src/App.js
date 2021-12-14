@@ -1,8 +1,8 @@
 import React from "react";
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 import NoteWrite from "./components/NoteWrite/NoteWrite";
-import Writing_box from "./components/NoteWrite/NoteWrite";
-
+import { Route, Routes , BrowserRouter} from "react-router-dom";
+import Home from "./components/Memoitem/Item";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -11,20 +11,21 @@ const GlobalStyle = createGlobalStyle`
   h1 {
     font-size: 50px;
     color: #f1f3f5;
-
     text-align: center ;
   }
 `;
 
-
 function App() {
   return (
-    <>
-    <h1>Notes</h1>
-    <GlobalStyle />
-    <NoteWrite />
-    </>
-  )
+    <BrowserRouter>
+      <h1>Notes</h1>
+      <GlobalStyle />
+        <Routes>
+          <Route path="/" element={<Item />} />
+          <Route path="/write" element={<NoteWrite />} />
+        </Routes>
+      </BrowserRouter>
+  );
 }
 
 export default App;
