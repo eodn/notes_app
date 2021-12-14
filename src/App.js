@@ -2,7 +2,7 @@ import React from "react";
 import { createGlobalStyle } from "styled-components";
 import NoteWrite from "./components/NoteWrite/NoteWrite";
 import { Route, Routes , BrowserRouter} from "react-router-dom";
-import Home from "./components/Memoitem/Item";
+import Item from "./components/Memoitem/Item";
 
 const GlobalStyle = createGlobalStyle`
   body {

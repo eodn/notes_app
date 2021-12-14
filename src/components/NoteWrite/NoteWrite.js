@@ -2,23 +2,21 @@ import { useEffect, useState } from "react";
 import * as S from "./Style";
 
 function NoteWrite() {
-  const [content, setContent] = useState(() =>
-    JSON.parse(localStorage.getItem("content"))
-  );
+  const [content, setContent] = useState({});
 
   const onSubmit = () => {
-    alert("메모가 생성되었습니다.");
-
-    setContent("");
+    if(content.length > 0) {
+      alert("메모가 생성되었습니다.");
+      setContent("");
+    }
   };
+
+
   const onCancel = () => {
     setContent("");
   };
 
-  useEffect(() => {
-    localStorage.setItem("content", JSON.stringify(content));
-    console.log(content);
-  }, [content]);
+
 
   return (
     <S.Positioner>

@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useState } from "react";
+import NoteWrite from "../NoteWrite/NoteWrite";
+import * as S from "../NoteWrite/Style";
+import { useEffect } from "react";
 
-function Home(){
-    return(
-        <div>
-            <h1>h1</h1>
-        </div>
-    );
+
+function Item() {
+  const [itemList, setItemList] = useState({});
+  
+  useEffect(() => {
+  }, [])
+  return (
+    <S.Positioner>
+      
+      <S.btn to="/write" >메모하기</S.btn>
+    </S.Positioner>
+  );
 }
 
-export default Home;
+export default Item;
