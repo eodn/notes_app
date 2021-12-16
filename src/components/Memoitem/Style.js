@@ -1,38 +1,28 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+
 
 
 export const Positioner = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
 `;
 
-export const btn = styled(Link)`
-  height: 50px;
-  width: 100px;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: black; 
-  border-radius: 4px;
-  font-size: 20px;
-  &:hover {
-    
-  }
-`;
+
 
 
 export const ItemBox = styled.textarea`
-  width: 500px;
-  height: 280px;
-  background-color: #dee2e6;
+  width: 550px;
+  height: 300px;
   border-radius: 7px;
   margin-bottom: 15px;
+  margin-right: 15px;
+  display: flex;
+  overflow: scroll;
+  
   
   resize: none ;
   background-attachment: local;
@@ -42,4 +32,8 @@ export const ItemBox = styled.textarea`
     repeating-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
   line-height: 31px;
   padding: 8px 10px;
+  `;
+
+export const DeleteBtn = styled.button`
+  
   `;
