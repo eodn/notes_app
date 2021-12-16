@@ -18,6 +18,13 @@ export const NoteBox = styled.textarea`
   padding: 10px;
   font-size: 14px;
 
+  &:hover {
+    border: 1px solid #fff;
+    background-color: #000;
+    color: #fff;
+  }
+
+  resize: none;
   background-attachment: local;
   background-image:
     linear-gradient(to right, white 10px, transparent 10px),

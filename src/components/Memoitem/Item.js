@@ -1,18 +1,22 @@
 import React, { useState } from "react";
-import NoteWrite from "../NoteWrite/NoteWrite";
-import * as S from "../NoteWrite/Style";
+import * as S from "./Style";
 import { useEffect } from "react";
 
-
 function Item() {
-  const [itemList, setItemList] = useState({});
-  
+  const [itemList, setItemList] = useState([]);
+
   useEffect(() => {
-  }, [])
+    setItemList(itemList ? JSON.parse(localStorage.getItem("key")) : []);
+  }, []);
+
+  const onClick = () => {
+    localStorage.removeItem("key")
+  } 
+
   return (
     <S.Positioner>
-      
-      <S.btn to="/write" >메모하기</S.btn>
+      {itemList && itemList.map((data) => (<S.ItemBox readOnly value={data.content} />))}
+      <S.btn to="/write">메모하기</S.btn>
     </S.Positioner>
   );
 }
