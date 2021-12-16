@@ -2,6 +2,7 @@ import React from "react";
 import NoteWrite from "./components/NoteWrite/NoteWrite";
 import { Route, Routes , BrowserRouter} from "react-router-dom";
 import MainPage from "./pages/MainPage/MainPage"
+import WritePage from "./pages/WritePage/WritePage";
 
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
     <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainPage />} />
-          <Route path="/write" element={<NoteWrite />} />
+          <Route path="/write" element={<WritePage />} />
         </Routes>
       </BrowserRouter>
   );

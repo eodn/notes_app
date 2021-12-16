@@ -11,7 +11,9 @@ function Item() {
 
   return (
     <S.Positioner>
-      {itemList && itemList.map((data) => (<S.ItemBox readOnly value={data.content} />))}
+      <S.ItemWrapper>
+        {itemList && itemList.map((data) => (<S.ItemBox readOnly value={data.content} />))}
+      </S.ItemWrapper>
     </S.Positioner>
   );
 }

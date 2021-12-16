@@ -9,19 +9,27 @@ export const Positioner = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 `;
 
-
+export const ItemWrapper = styled.div`
+  width: 1300px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+`;
 
 
 export const ItemBox = styled.textarea`
   width: 550px;
   height: 300px;
-  border-radius: 7px;
-  margin-bottom: 15px;
-  margin-right: 15px;
+  margin:auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  
   display: flex;
-  overflow: scroll;
+  align-items: center;
+
   
   
   resize: none ;

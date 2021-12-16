@@ -22,7 +22,7 @@ function MainPage() {
 
       <h1>Notes</h1>
       <Item />
-      <S.btn to="/">메모하기</S.btn>
+      <S.btn to="/write">메모하기</S.btn>
     </S.Positioner>
   );
 }
