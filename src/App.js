@@ -1,5 +1,4 @@
 import React from "react";
-import NoteWrite from "./components/NoteWrite/NoteWrite";
 import { Route, Routes , BrowserRouter} from "react-router-dom";
 import MainPage from "./pages/MainPage/MainPage"
 import WritePage from "./pages/WritePage/WritePage";

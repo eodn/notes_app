@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { createGlobalStyle } from "styled-components";
 
 import Item from "../../components/Memoitem/Item";
-import * as S from "./style";
+import * as S from "./Style";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -16,14 +16,24 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function MainPage() {
+  const [itemList, setItemList] = useState([]);
+
+  useEffect(() => {
+    setItemList(itemList ? JSON.parse(localStorage.getItem("key")) : []);
+  }, []);
+
   return (
+    <>
+    <h1>Notes</h1>
     <S.Positioner>
       <GlobalStyle />
 
-      <h1>Notes</h1>
-      <Item />
-      <S.btn to="/write">메모하기</S.btn>
+      
+      {itemList && itemList.map((data) => (<Item memo={data} itemList={itemList}/>))}
+      
     </S.Positioner>
+    <S.btn to="/write">메모하기</S.btn>
+    </>
   );
 }
 

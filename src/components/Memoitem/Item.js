@@ -2,17 +2,24 @@ import React, { useState } from "react";
 import * as S from "./Style";
 import { useEffect } from "react";
 
-function Item() {
-  const [itemList, setItemList] = useState([]);
-
-  useEffect(() => {
-    setItemList(itemList ? JSON.parse(localStorage.getItem("key")) : []);
-  }, []);
+function Item({memo, itemList}) {
+  const handleDeleteNote = () => {
+    localStorage.setItem(
+      'key',
+      JSON.stringify(
+        itemList.filter((data) => {
+          return data.id !== memo.id;
+        }),
+      ),
+    );
+    window.location.reload();
+  };
 
   return (
     <S.Positioner>
       <S.ItemWrapper>
-        {itemList && itemList.map((data) => (<S.ItemBox readOnly value={data.content} />))}
+        <S.ItemBox readOnly value={memo.content} />
+        <S.DeleteBtn onClick={handleDeleteNote}>❎</S.DeleteBtn>
       </S.ItemWrapper>
     </S.Positioner>
   );

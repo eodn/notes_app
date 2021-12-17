@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 
 export const Positioner = styled.div`
-  width: 100%;
+  width: 40%;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -30,7 +30,7 @@ export const ItemBox = styled.textarea`
   display: flex;
   align-items: center;
 
-  
+
   
   resize: none ;
   background-attachment: local;
@@ -42,6 +42,6 @@ export const ItemBox = styled.textarea`
   padding: 8px 10px;
   `;
 
-export const DeleteBtn = styled.button`
-  
+export const DeleteBtn = styled.div`
+  cursor: pointer;
   `;
