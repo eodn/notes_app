@@ -44,4 +44,5 @@ export const ItemBox = styled.textarea`
 
 export const DeleteBtn = styled.div`
   cursor: pointer;
+   
   `;
